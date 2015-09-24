@@ -14,6 +14,10 @@ public class BuddyInfo {
 		System.out.println("Hello "+ newBuddy.getName() + "!");
 	}
 	
+	public void doNothing() {
+		System.out.println("This method does nothing");
+	}
+	
 	public int getNumber() {
 		return number;
 	}
