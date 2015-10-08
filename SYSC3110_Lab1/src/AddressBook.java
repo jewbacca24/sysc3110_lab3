@@ -21,12 +21,25 @@ public class AddressBook {
 		}
 	}
 	
-	public static void main(String args[]) {
-		System.out.println("Om Nom Nom");
-		BuddyInfo pie = new BuddyInfo();
-		pie.setName("Fred Fred Burger");
-		AddressBook book = new AddressBook();
-		book.addBuddy(pie);
-		book.removeBuddy();
+	public List<BuddyInfo> getBuddyInfo() {
+		return buddyInfo;
 	}
+	
+	public String toString() {
+		String s = "";
+		for (BuddyInfo bud: buddyInfo) {
+			s += bud.toString();
+		}
+		return s;
+	}
+	
+	
+//	public static void main(String args[]) {
+//		System.out.println("Om Nom Nom");
+//		BuddyInfo pie = new BuddyInfo();
+//		pie.setName("Fred Fred Burger");
+//		AddressBook book = new AddressBook();
+//		book.addBuddy(pie);
+//		book.removeBuddy();
+//	}
 }

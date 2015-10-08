@@ -37,4 +37,21 @@ public class BuddyInfo {
 	public void setAddress(String address) {
 		this.address = address;
 	}
+	
+	public boolean equals( Object obj ) {
+		if (null == obj) return false;
+		
+		if ( !(obj instanceof BuddyInfo) ) {
+			return false;
+		}
+		BuddyInfo buddy = (BuddyInfo) obj;
+		
+		return this.name.equals(buddy.name) && (this.number == buddy.number)
+				&& this.address.equals(buddy.address);
+	}
+	
+	public String toString() {
+		return "\nName: " + this.name + "\n" + "Number: " + this.number + "\n"
+				+ "Address: " + this.address + "\n";
+	}
 }
